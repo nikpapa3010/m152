@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Modulo</title>
+</head>
+<body>
+<noscript>
+Es ist kein JavaScript aktiv!
+</noscript>
+<h2>Rechnen mit Modulo</h2>
+<p>Es wird berechnet, wie oft eine Zahl durch x ohne Rest (Modulo) teilbar ist.</p>
+<script type="text/javascript">
+  var erg = 0;
+  var zahl = 1000;
+  var teiler = 5;
+  temp = zahl;
+  while(temp % teiler == 0)
+  {
+    temp = temp/teiler;
+    erg++;
+  }
+  alert(zahl + ' lässt sich ohne Rest ' + erg + 'x durch ' + teiler + ' teilen. (1000:5=200 || 200:5=40|| 40:5=8)');
+</script>
+<p>Antwort zur Teilfrage2: Hier wird eine kopfgesteuerte Wiederholung verwendet, da es vorkommt, 
+dass eine bestimmte Zahl nicht ohne Rest teilbar ist. Damit muss die Schleife nicht durchlaufen werden.</p>
+</body>
+</html>

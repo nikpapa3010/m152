@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Barrierefreies Navigationsmenü mit JavaScript</title>
+<style type="text/css">
+<!--
+ul {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+li {
+	float: none;
+	position: relative;
+	width: 13em;
+	background-color: #999999;
+	padding: 0.5em;
+	border-right-width: thick;
+	border-right-color: #FF9900;
+	border-right-style: solid;
+	border-bottom-width: 0.1em;
+	border-bottom-style: solid;
+	border-bottom-color: #FF9900;
+}
+li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+li a[href="#"] {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+li ul {
+	display: none;
+	position: absolute;
+	top: 0em;
+	left: 14.4em;
+}
+li ul a:hover {
+	color: #FFCC66;
+	border-left-color: #FFCC00;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+}
+li.zeiger ul {
+	display: block;
+}
+li:hover ul{
+	display: block;
+} 
+
+-->
+</style>
+
+<script>
+nurIE = function() {
+if (document.all&&document.getElementById) {
+navRoot = document.getElementById("navigation");
+for (i=0; i<navRoot.childNodes.length; i++) {
+node = navRoot.childNodes[i];
+if (node.nodeName=="LI") {
+node.onmouseover=function() {
+this.className+=" zeiger";
+  }
+  node.onmouseout=function() {
+  this.className=this.className.replace(" zeiger", "");
+   }
+   }
+  }
+ }
+}
+window.onload=nurIE;
+</script>
+</head>
+
+<body>
+  <ul id="navigation">
+    <li><a href="#">&Uuml;ber uns</a> 
+      <ul>
+        <li><a href="philosophie.htm">Philosophie</a></li>
+        <li><a href="geschichte.htm">Firmengeschichte</a></li>
+        <li><a href="niederlassungen.htm">Niederlassungen</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Produkte</a>
+      <ul>
+        <li><a href="landschaftsbau.htm">Landschaftsbau</a></li>
+        <li><a href="reitplatzbau.htm">Reitplatzbau</a></li>
+        <li><a href="strassenbau.htm">Stra&szlig;enbau</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Kontakt</a>
+      <ul>
+        <li><a href="beratung.htm">Beratung</a></li>
+        <li><a href="vertrieb.htm">Vertrieb</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

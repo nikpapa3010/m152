@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Objekt: navigator</title>
+  <style type="text/css">
+    body { font: small "Courier New",Courier,Arial; }  
+  </style>
+</head>
+<body>
+<h2>Eigenschaften des navigator-Objekts</h2>
+<script>
+  document.write("<p><b>Codename des Browsers mit navigator.appCodeName:<\/b><br>"
+                  + navigator.appCodeName + "<br>");
+  document.write("<p><b>Name des Browsers mit navigator.appName:<\/b><br>" 
+                  + navigator.appName + "<br>");
+  document.write("<p><b>Version des Browsers mit navigator.appVersion:<\/b><br>" 
+                  + navigator.appVersion + "<br>");
+  document.write("<p><b>Bezeichnung des Browsers mit navigator.userAgent:<\/b><br>"
+                  + navigator.userAgent + "<br>");
+  document.write("<p><b>Java-Applets möglich? mit navigator.javaEnabled():<\/b><br>" + navigator.javaEnabled() + "<br>");
+  document.write("<p><b>Plattform mit navigator.platform:<\/b><br>" 
+                  + navigator.platform + "<br>");
+  for (var i=0; i<navigator.plugins.length; i++) {
+    document.write("<p><b>Installierte PlugIns mit navigator.plugins[]:<\/b><br>"
+                  + navigator.plugins[i].name + "<br>");
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Übung 2: Hinweise bei Verweisen</title>
+<style type="text/css">
+div.main { position:absolute;
+           visibility:hidden;
+           top:40px; left:80px;
+           height:70px; width:150px;
+           background:url('blase.gif') white no-repeat;
+           padding:12px 0px 0px 5px;
+           margin:5px;
+           font:8pt Arial,sans-serif;
+         }
+pre      { font:8pt 'Courier New',courier,monospace; }
+
+</style>
+<script type="text/javascript">
+  function hinweis(name) {
+    document.getElementById(name).style.visibility = "visible";
+  }
+
+  function weg(name) {
+   document.getElementById(name).style.visibility = "hidden";
+  }
+</script>
+</head>
+<body>
+<h2>Übung 2: Hinweise bei Verweisen</h2>
+<p>&nbsp;</p>
+<a href="#" onMouseOver="hinweis('e1')" onMouseOut="weg('e1')">Verweis 1</a><p>
+<a href="#" onMouseOver="hinweis('e2')" onMouseOut="weg('e2')">Verweis 2</a><p>
+<a href="#" onMouseOver="hinweis('e3')" onMouseOut="weg('e3')">Verweis 3</a><p>
+<a href="#" onMouseOver="hinweis('e4')" onMouseOut="weg('e4')">Verweis 4</a>
+
+<div class="main" id="e1">
+<pre>
+   Dies ist der 
+   Hinweis für 
+   die Ebene 1.
+
+</pre>
+</div>
+
+<div class="main" id="e2">
+<pre>
+   Der Hinweis für 
+   Ebene 2 steht
+   auch hier.
+
+</pre>
+</div>
+
+<div class="main" id="e3">
+<pre>
+   Hinweis 3 ist 
+   auch nicht übel.
+
+
+</pre>
+</div>
+
+<div class="main" id="e4">
+<pre>
+
+    Hinweis 4
+
+
+</pre>
+</div>
+
+</body>
+</html>
+

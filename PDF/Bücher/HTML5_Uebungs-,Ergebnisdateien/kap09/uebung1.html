@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Übung 1: Farbauswahl</title>
+<style type="text/css">
+  body  { background-color:#AAAAAA;
+        }
+  h1    { font:bold 16pt Arial,sans-serif;
+          text-align:center;
+        }
+  p     { font:12pt Arial,sans-serif;
+          text-decoration:underline;
+          text-align:center;
+        }
+ table  { border-width:0px;
+          width:300px; height:20px;
+          padding:0px;
+        }
+ td     { border:1px solid black;
+          height:20px;
+        }
+</style>
+<script type="text/javascript">
+  function farbwechsel(farbe, aktion) {
+    if (aktion=='bg')
+      document.getElementById('body').style.backgroundColor = '#'+farbe;
+    else
+      document.getElementById('body').style.color = '#'+farbe;
+  }
+</script>
+</head>
+
+<body id="body">
+
+<h1>Ändern der Hintergrundfarbe</h1>
+
+<div align="center">
+<table summary="Tabelle mit Hintergrundfarben">
+  <tr>
+    <td width="33%" bgcolor="#FF0000" onClick="farbwechsel('FF0000','bg');">&nbsp;</td>
+    <td width="33%" bgcolor="#00FF00" onClick="farbwechsel('00FF00','bg');">&nbsp;</td>
+    <td width="33%" bgcolor="#0000FF" onClick="farbwechsel('0000FF','bg');">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="33%" bgcolor="#FFA500" onClick="farbwechsel('FFA500','bg');">&nbsp;</td>
+    <td width="33%" bgcolor="#F0E68C" onClick="farbwechsel('F0E68C','bg');">&nbsp;</td>
+    <td width="33%" bgcolor="#ADD8E6" onClick="farbwechsel('ADD8E6','bg');">&nbsp;</td>
+  </tr>
+</table>
+</div>
+
+<h1>Ändern der Textfarbe</h1>
+<div align="center">
+<table summary="Tabelle mit Vordergrundfarben">
+  <tr>
+    <td width="33%" bgcolor="#FF0000" onClick="farbwechsel('FF0000','fg');">&nbsp;</td>
+    <td width="33%" bgcolor="#00FF00" onClick="farbwechsel('00FF00','fg');">&nbsp;</td>
+    <td width="33%" bgcolor="#0000FF" onClick="farbwechsel('0000FF','fg');">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="33%" bgcolor="#FFA500" onClick="farbwechsel('FFA500','fg');">&nbsp;</td>
+    <td width="33%" bgcolor="#F0E68C" onClick="farbwechsel('F0E68C','fg');">&nbsp;</td>
+    <td width="33%" bgcolor="#ADD8E6" onClick="farbwechsel('ADD8E6','fg');">&nbsp;</td>
+  </tr>
+</table>
+<p onClick="farbwechsel('AAAAAA','bg'); farbwechsel('000000','fg');">Zurücksetzen</p>
+
+</div>
+
+</body>
+</html>

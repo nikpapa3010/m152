@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Werte vegleichen</title>
+<script type="text/javascript">
+function vergleich()
+{
+  a = document.frm.T1.value;
+  b = document.frm.T2.value;
+  if (a > b) document.frm.T3.value = '1.Wert > 2.Wert';
+  else if (b > a) document.frm.T3.value='1.Wert < 2.Wert';
+  else document.frm.T3.value='1.Wert = 2.Wert';
+}
+</script>
+</head>
+
+<body>
+<noscript>
+Es ist kein JavaScript aktiv!
+</noscript>
+<h2>Vergleich zweier Werte</h2>
+<form name="frm" onSubmit="vergleich(); return false;" action="">
+  <p>1.Wert: <input type="text" name="T1" size="10"> und 2. Wert: <input type="text" name="T2" size="10"></p>
+  <p><input type="submit" value="Berechnen" name="x"></p>
+  <p>Ausgabe: <input type="text" name="T3" size="20"></p>
+</form>
+</body>
+</html>

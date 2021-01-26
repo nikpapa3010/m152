@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Standort kontinuierlich ermitteln</title>
+</head>
+<body>
+<button onclick="standortErmitteln()">Standort ermitteln</button>
+<p>Ihr Standort:</p>
+<p id="ausgabe"></p>
+<script>
+var x = document.getElementById("ausgabe");
+function standortErmitteln() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(zeigeStandort);
+    } else { 
+        x.innerHTML = "Ihr Browser unterstützt die Ermittlung des Standorts nicht.";
+    }
+}
+function zeigeStandort(standort) {
+    x.innerHTML = "Breitengrad: " + standort.coords.latitude + 
+    "<br>Längengrad: " + standort.coords.longitude;	
+}
+</script>
+</body>
+</html>

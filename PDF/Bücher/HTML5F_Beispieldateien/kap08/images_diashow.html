@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bildwechsel</title>
+
+<script type="text/javascript">
+  var bilder = new Array("blau.jpg", "land.jpg", "winter.jpg", "wueste.jpg");
+  var bildlegende = new Array("Das blaue Meer.", "Alle Vöglein sind schon da", "Sonnenuntergang im Winter", "Fata Morgana");
+  var count = 0;
+
+  function wechsel(stelle)
+  {
+    if (stelle == 0)
+      count = 0;
+    if ((stelle == 1) && (count > 0))
+      count--;
+    if ((stelle == 2) && (count < bilder.length - 1))
+      count++;
+    if (stelle == 3)
+      count = bilder.length - 1;
+    document.bild.src = "images/" + bilder[count];
+    document.legende.ausgabe.value = bildlegende[count];
+  }
+</script>
+
+</head>
+<body >
+  <div align="center">
+    <h2>Dia-Show</h2>
+    <form name="legende" action="">
+      <input type="button" value="<<" onClick="wechsel(0);">
+      <input type="button" value=" < " onClick="wechsel(1);">
+      <input type="button" value=" > " onClick="wechsel(2);">
+      <input type="button" value=">>" onClick="wechsel(3);"><br>
+      <input type="Text" name="ausgabe" size="30" readonly>
+    </form>
+    <p><img src="images/blau.jpg" alt="bild" border="0" width="320" height="240" name="bild"></p>
+  </div>
+<script type="text/javascript">
+  wechsel(0);
+</script>
+</body>
+</html>

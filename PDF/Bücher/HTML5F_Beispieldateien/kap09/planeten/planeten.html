@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Unser Sonnensystem</title>
+<link type="text/css" rel="stylesheet" href="planeten.css">
+<script type="text/javascript">
+
+  var letztesBild = 'planetenbild1';
+  var letzteBox   = 'planeteninfo1';
+
+  function umschalt(i)
+  {
+    EbeneEsel ='esel'+i;
+    EbeneBild ='planetenbild'+i;
+    EbeneBox  ='planeteninfo'+i;
+
+    ebene=document.getElementById(EbeneEsel).style;
+    ebene.top=350 + "px";
+
+    letztesBild = document.getElementById(letztesBild).style;
+    letzteBox   = document.getElementById(letzteBox).style;
+    jetzigesBild= document.getElementById(EbeneBild).style;
+    jetzigeBox  = document.getElementById(EbeneBox).style;
+
+    letztesBild.visibility  = 'hidden';
+    letzteBox.visibility    = 'hidden';
+    jetzigesBild.visibility = 'visible';
+    jetzigeBox.visibility   = 'visible';
+
+    letztesBild = EbeneBild;
+    letzteBox = EbeneBox;
+
+    bewegung(i);
+  }
+
+  function bewegung(i)
+  {
+    ziel=450;
+    EbeneEsel='esel'+i;
+    ebene=document.getElementById(EbeneEsel).style;
+    ebene.visibility='visible';
+
+  	 if(parseInt(ebene.top) < ziel)
+  	 {
+      ebene.top = (parseInt(ebene.top)+1) + "px";
+  		setTimeout('bewegung('+i+')',5);
+  	 }
+  }
+</script>
+
+</head>
+<body>
+<div id="header">Unsere neun Planeten</div>
+<!--Planetenbilder-->
+  <div id="planetenbild1" class="bildbox">
+    <img src="bilder/merkur.jpg" alt="Merkur" border="0"></div>
+  <div id="planetenbild2" class="bildbox">
+    <img src="bilder/venus.jpg" alt="Venus" border="0"></div>
+  <div id="planetenbild3" class="bildbox">
+    <img src="bilder/erde.jpg" alt="Erde" border="0"></div>
+  <div id="planetenbild4" class="bildbox">
+    <img src="bilder/mars.jpg" alt="Mars" border="0"></div>
+  <div id="planetenbild5" class="bildbox">
+    <img src="bilder/jupiter.jpg" alt="Jupiter" border="0"></div>
+  <div id="planetenbild6" class="bildbox">
+    <img src="bilder/saturn.jpg" alt="Saturn" border="0"></div>
+  <div id="planetenbild7" class="bildbox">
+    <img src="bilder/uranus.jpg" alt="Uranus" border="0"></div>
+  <div id="planetenbild8" class="bildbox">
+    <img src="bilder/neptun.jpg" alt="Neptun" border="0"></div>
+  <div id="planetenbild9" class="bildbox">
+    <img src="bilder/pluto.jpg" alt="Pluto" border="0"></div>
+
+<!--Informationen zu den einzelnen Planeten-->
+  <div id="planeteninfo1" class="infobox">
+    <span class="gb">M</span>erkur<br>Durchmesser: 4.878 km<br>Umlaufzeit: 87,969 Tage</div>
+  <div id="planeteninfo2" class="infobox">
+    <span class="gb">V</span>enus<br>Durchmesser: 12.104 km<br>Umlaufzeit: 224,70 Tage</div>
+  <div id="planeteninfo3" class="infobox">
+    <span class="gb">E</span>rde<br>Durchmesser: 12.742 km<br>Umlaufzeit: 365,2 Tage</div>
+  <div id="planeteninfo4" class="infobox">
+    <span class="gb">M</span>ars<br>Durchmesser: 6.794 km<br>Umlaufzeit: 686,98 Tage</div>
+  <div id="planeteninfo5" class="infobox">
+    <span class="gb">J</span>upiter<br>Durchmesser: 142.796 km<br>Umlaufzeit: 11,869 Jahre</div>
+  <div id="planeteninfo6" class="infobox">
+    <span class="gb">S</span>aturn<br>Durchmesser: 120.000 km<br>Umlaufzeit: 29,46 Jahre</div>
+  <div id="planeteninfo7" class="infobox">
+    <span class="gb">U</span>ranus<br>Durchmesser: 51.118 km<br>Umlaufzeit: 84,67 Jahre</div>
+  <div id="planeteninfo8" class="infobox">
+    <span class="gb">N</span>eptun<br>Durchmesser: 49.424 km<br>Umlaufzeit: 165,49 Jahre</div>
+  <div id="planeteninfo9" class="infobox">
+    <span class="gb">P</span>luto<br>Durchmesser: 2.300 km<br>Umlaufzeit: 247,7 Jahre</div>
+
+<!-- Eselsbrücken -->
+  <div style="position:absolute; left:10px; top:455px; z-index:20;">Eselsbrücke:</div>
+  <div id="esel1" class="eselbox" style="left:100px;">
+    <span class="gb">M</span>ein</div>
+  <div id="esel2" class="eselbox" style="left:140px;">
+    <span class="gb">V</span>ater</div>
+  <div id="esel3" class="eselbox" style="left:185px;">
+    <span class="gb">E</span>rklärt</div>
+  <div id="esel4" class="eselbox" style="left:235px;">
+    <span class="gb">M</span>ir</div>
+  <div id="esel5" class="eselbox" style="left:265px;">
+    <span class="gb">J</span>eden</div>
+  <div id="esel6" class="eselbox" style="left:315px;">
+    <span class="gb">S</span>onntag</div>
+  <div id="esel7" class="eselbox" style="left:380px;">
+    <span class="gb">U</span>nsere</div>
+  <div id="esel8" class="eselbox" style="left:435px;">
+    <span class="gb">N</span>eun</div>
+  <div id="esel9" class="eselbox" style="left:480px;">
+    <span class="gb">P</span>laneten</div>
+
+<!--Links-->
+  <div class="navi">
+  | <a href="#" onclick="umschalt('1'); return false;">Nr.1</a>
+  | <a href="#" onclick="umschalt('2'); return false;">Nr.2</a>
+  | <a href="#" onclick="umschalt('3'); return false;">Nr.3</a>
+  | <a href="#" onclick="umschalt('4'); return false;">Nr.4</a>
+  | <a href="#" onclick="umschalt('5'); return false;">Nr.5</a>
+  | <a href="#" onclick="umschalt('6'); return false;">Nr.6</a>
+  | <a href="#" onclick="umschalt('7'); return false;">Nr.7</a>
+  | <a href="#" onclick="umschalt('8'); return false;">Nr.8</a>
+  | <a href="#" onclick="umschalt('9'); return false;">Nr.9</a> |
+  </div>
+
+<script type="text/javascript">
+    var w3c = document.documentElement ? 1 : 0;
+    if (!w3c) {
+      alert('Ihr Browser beherrscht nicht den W3C-Standard. Es ist daher nicht sichergestellt, dass die Webseite korrekt dargestellt wird');
+    }
+</script>
+</body>
+</html>

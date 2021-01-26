@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Datumsausgabe</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script type="text/javascript">
+    var Jetzt = new Date();
+    var Tag   = Jetzt.getDate();
+    var WTag  = Jetzt.getDay();
+    var Monat = Jetzt.getMonth();
+    var Jahr  = Jetzt.getFullYear();
+
+    Wochentagname = new Array ("Sonntag","Montag","Dienstag","Mittwoch","Donnnerstag","Freitag","Samstag");
+    Monatsname = new Array ("Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember");
+
+    document.write('Bisherige Ausgabe des Datums:<br>Heute ist der ' + WTag + '. Wochentag, '+ Tag + '.' + (Monat+1) + '.' + Jahr + '.<br><br>');
+    document.write('Ausgabe des Datums mit Hilfe zweier Felder:<br>Heute ist ' + Wochentagname[WTag] + ', der '+ Tag + '. ' + Monatsname[Monat] + ' ' + Jahr + '.');
+  </script>
+</body>
+</html>

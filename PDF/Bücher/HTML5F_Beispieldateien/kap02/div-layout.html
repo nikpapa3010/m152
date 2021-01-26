@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DIV-Layout</title></head>    
+<style type="text/css">
+<!--  
+body { margin: 0 }  
+#navigation {
+	position: absolute;
+	padding: 5px;
+	border: 1px solid #999999;
+	height: auto;
+	width: 20%;
+	left: 5px;
+	top: 9px;
+	bottom: auto;
+	background-color: #33CCFF;
+}
+#inhalt {
+	position: relative;
+	padding: 5px;
+	border: 1px solid #999999;
+	height: auto;
+	width: 78%;
+	left: 20%;
+	top: 9px;
+	background-color: #FFCC99;
+}
+#fusszeile {
+	position: relative;
+	padding: 5px;
+	border: 1px solid #999999;
+	height: 20px;
+	width: 78%;
+	left: 20%;
+	top: 9px;
+	background-color: #CCCCCC;
+}
+-->    
+</style> 
+</head>
+
+<body>
+<div id="navigation"> 
+  <p>Link 1 </p>
+  <p>Link 2</p>
+  <p>Link 3</p>
+</div>
+<div id="inhalt"> 
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich stets wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich stets wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich stets wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+</div>
+<div id="fusszeile"> Fußzeile </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body { font: 10pt Verdana,Arial,sans-serif;
+       color: #000080;
+     }
+
+#header  { font: bold 18pt 'Trebuchet MS';
+           color: #000;
+           position: absolute;
+           left: 100px;
+           top: 30px;
+           border: 1px solid #A00000;
+         }
+
+.bildbox { position: absolute;
+           left: 100px;
+           top: 90px;
+           visibility: hidden;
+           z-index: 5; }
+
+.infobox { border: 1px solid #A00000;
+           visibility: hidden;
+           position: absolute;
+           padding: 5px;
+           width: 200px;
+           left: 350px;
+           top: 250px;
+           z-index: 10;
+      }
+
+.eselbox { position: absolute;
+           visibility: visible;
+           top: 450px;
+         }
+
+.navi    { position: absolute;
+           left: 100px;
+           top: 500px;
+         }
+
+.gb { font: bold 14pt Verdana,Arial,sans-serif;
+      color: #FFFF00;
+    }
+
+a         { font-weight: bold; color:#000000;}
+a:visited { text-decoration: overline underline;  }
+a:link    { text-decoration: overline underline; }
+a:hover   { text-decoration: none; }
+
+div { color: #000000;
+      border: 1px solid #A00000; }

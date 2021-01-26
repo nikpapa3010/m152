@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test, ob ein Optionsfeld ausgewählt wurde</title>
+  <script type="text/javascript">
+      function optionstest()
+      {
+        var j = false;
+        for(i = 0; i < document.RadioForm.Abfrage.length; i++)
+          if(document.RadioForm.Abfrage[i].checked)
+          {
+            j = true;
+            break;
+          }
+
+        if(!j)
+        {
+          alert("Sie müssen mindestens eine Option auswählen.")
+          return false;
+        }
+        return true;
+      }
+  </script>
+</head>
+<body>
+  <div align="center">
+  <h3>Test, ob ein Optionsfeld ausgewählt wurde</h3>
+  <form action="" name="RadioForm" onSubmit="return optionstest();">
+    <input type="radio" value="1" name="Abfrage">Option 1<br>
+    <input type="radio" value="2" name="Abfrage">Option 2<br>
+    <input type="radio" value="3" name="Abfrage">Option 3<br>
+    <input type="submit" name="x1" value="Testen">
+  </form>
+  </div>
+</body>
+</html>

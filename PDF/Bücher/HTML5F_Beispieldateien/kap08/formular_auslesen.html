@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Unterobjekt forms</title>
+  <script type="text/javascript">
+      function formauslesen()
+      {
+        var text = "";
+
+        text ='name: ' +  document.forms[0].name + '\n'
+            + 'action: ' + document.forms[0].action + '\n'
+            + 'method: ' + document.forms[0].method + '\n'
+            + 'encoding: ' + document.forms[0].encoding + '\n'
+            + 'target: '+ document.forms[0].target + '\n'
+            + 'length: '+ document.forms[0].length;
+
+        alert(text);
+      }
+  </script>
+</head>
+<body onLoad="formauslesen();">
+  <h3>Auslesen der Formulardaten</h3>
+  <form name="Formular" action="test.php" method="post" target="_top">
+  </form>
+</body>
+</html>

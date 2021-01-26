@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Ebenen verbergen und anzeigen</title>
+<link type="text/css" rel="stylesheet" href="dhtml.css">
+<script type="text/javascript">
+  var w3c = (document.documentElement) ? 1 : 0;
+
+  function Sichtbar(name) {
+    if (w3c)
+      document.getElementById(name).style.visibility = "visible";
+    else
+      alert('Sie verwenden einen Browser, der den W3C-Standard zum Ansprechen von Elementen nicht unterstützt.');
+  }
+
+  function Unsichtbar(name) {
+    if (w3c)
+      document.getElementById(name).style.visibility = "hidden";
+    else
+      alert('Sie verwenden einen Browser, der den W3C-Standard zum Ansprechen von Elementen nicht unterstützt.');
+  }
+</script>
+</head>
+<body>
+  <noscript>Um DHTML nutzen zu können, müssen Sie das Ausführen von JavaScript zulassen.</noscript>
+  <h2>Ebenen anzeigen und verbergen</h2>
+  <div id="ebene1" style="visibility:hidden;">
+    <p class="box1">Dieses Element wurde durch den Aufruf von "visibility=visible" sichtbar gemacht.<br>Wird die Sichtbarkeit auf "hidden" gesetzt, verschwindet das Element wieder.</p>
+  </div>
+
+  <div id="ebene2" style="visibility:hidden;">
+  <p class="box2">Dieses Element erscheint und verschwindet wie das vorhergehende Element.<br>Ihm wurde jedoch ein anderes Aussehen übergeben.</p>
+  </div>
+
+  <p><a href="javascript:Sichtbar('ebene1');">Ebene 1 anzeigen</a> -|- <a href="javascript:Unsichtbar('ebene1');">Ebene 1 verbergen</a></p>
+  <p><a href="javascript:Sichtbar('ebene2');">Ebene 2 anzeigen</a> -|- <a href="javascript:Unsichtbar('ebene2');">Ebene 2 verbergen</a></p>
+</body>
+</html>

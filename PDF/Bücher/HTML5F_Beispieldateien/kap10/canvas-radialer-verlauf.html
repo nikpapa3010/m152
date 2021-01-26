@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Radialer Verlauf</title>
+<style type="text/css">
+#meinCanvas {
+	border:1px solid #1B1010;
+}
+</style>
+</head>
+<body>
+<canvas id="meinCanvas" width="500" height="300"></canvas>
+<script>
+var canvas = document.getElementById("meinCanvas");
+var ctx = canvas.getContext("2d");
+var verlauf=ctx.createRadialGradient(220,120,0,220,120,100);
+verlauf.addColorStop(0,"white");
+verlauf.addColorStop(1,"skyblue");
+ctx.fillStyle = verlauf;
+ctx.beginPath();
+ctx.arc(250,150,100,0,Math.PI * 2);
+ctx.fill();
+</script>
+</body>
+</html>

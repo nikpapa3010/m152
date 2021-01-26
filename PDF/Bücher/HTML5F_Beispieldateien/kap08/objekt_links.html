@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Objekt: links</title>
+</head>
+<body>
+  <h3>Auslesen der verschiedenen Verweise</h3>
+  <a href="http://www.herdt.com/" name="link1">HERDT-Verlag</a> |
+  <a href="form.html" target="Fenster2" name="link2">Zum Formular</a>
+
+  <script type="text/javascript">
+      for(i = 0; i < document.links.length; i++)
+      {
+        alert((i + 1) + ". Link:" + "\n" +
+              "Name: " + document.links[i].name + "\n" +
+              "Target: " + document.links[i].target + "\n" +
+              "Ziel: " + document.links[i] + "\n" +
+              "Text: " + document.links[i].text + "\n");
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Programmsteuerung</title>
+<script type="text/javascript">
+  function func1(x) {
+    if ((x % 2) == 0) {
+      alert('Bedingte Auswahl:\n' + x + ' ist eine gerade Zahl.');
+    }
+  }
+
+  function func2(Note) {
+    alert('Einseitige Auswahl:\nBestimmung der Note ' + Note);
+    switch (Note) {
+      case "1": alert("Sehr gut"); break;
+      case "2": alert("Gut"); break;
+      case "3": alert("Befriedigend"); break;
+      case "4": alert("Ausreichend"); break;
+      case "5": alert("Mangelhaft"); break;
+      case "6": alert("Ungenügend"); break;
+      default: alert("Diese Note gibt es nicht."); break;
+    }
+  }
+
+  function func3() {
+    for ( var i=0; i < 10; i++ ) {
+      alert(i);
+    }
+  }
+
+  function func4() {
+    var i=10;
+    while ( i > 0 ) {
+      i--; alert(i);
+    }
+  }
+
+  function func5() {
+    var i=10;
+    do {
+      i--; alert(i);
+    }
+    while ( i > 0 )
+  }
+
+  function func6() {
+    for ( var i=0; i < 10; i++ ) {
+      if (i==5)
+        break;
+      alert(i);
+    }
+  }
+
+  function func7() {
+    for ( var i=0; i <= 10; i++ ) {
+      if ((i % 2) == 0)
+        continue;
+      alert(i);
+    }
+  }
+</script>
+
+</head>
+<body>
+ <h3>Beispiele aus Kapitel 5</h3>
+ <p><a href="javascript:func1(124);">Bedingte Auswahl</a> mit <code>if</code><br>
+    <a href="javascript:func2('3');">Einseitige Auswahl</a> mit <code>switch</code>
+ <p><a href="javascript:func3();">Zählergesteuerte Wiederholung</a> mit <code>for</code><br>
+    <a href="javascript:func4();">Kopfgesteuerte Wiederholung</a> mit <code>while</code><br>
+    <a href="javascript:func5();">Fußgesteuerte Wiederholung</a> mit <code>do while</code><br>
+ <p><a href="javascript:func6();">Schleifensteuerung</a> mit <code>break</code><br>
+    <a href="javascript:func7();">Schleifensteuerung</a> mit <code>continue</code><br>
+</body>
+</html>

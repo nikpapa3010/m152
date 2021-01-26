@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Browserweiche</title>
+<script>
+  if (parseInt(navigator.appVersion) >= 4) {if(navigator.appName == "Netscape") {      // Firefox, Chrome, Safari
+       if (navigator.userAgent.indexOf("Chrome") != -1) {
+          alert("Sie verwenden Google Chrome.");
+       } else if (navigator.userAgent.indexOf("Safari") != -1) {
+          alert("Sie verwenden Apple Safari.");       
+       } else {
+          alert("Sie verwenden Mozilla Firefox.");
+       }
+    } else if(navigator.appName.indexOf("Internet Explorer") != -1) {
+       alert("Sie verwenden den Internet Explorer.");
+    } else if(navigator.appName == "Opera") {
+       alert("Sie verwenden den Opera-Browser.");
+    } else {
+       alert("Sie verwenden einen anderen Browser.");
+    }
+  } else {
+    alert("Sie verwenden einen älteren Browser.");
+  }
+</script>
+</head>
+<body>
+</body>
+</html>

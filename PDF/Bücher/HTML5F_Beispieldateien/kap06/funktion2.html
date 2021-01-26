@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ereignisabfragen</title>
+  <script>
+    function meldung(anzeige) {
+      alert(anzeige);
+    } 
+  </script>
+</head>
+<body onLoad="meldung('Ereignis: OnLoad\nHerzlich willkommen auf meiner
+    Webseite!')" onUnLoad="meldung('Ereignis: OnUnload\nSie wollen schon gehen?
+    Vielen Dank für Ihren Besuch...')">
+  <h3>Mehrere Ereignisabfragen</h3>
+  <p>Im &lt;body&gt; sind die Ereignisse OnLoad und OnUnload definiert.<br>
+  <a href="weiterleit.html">Verlassen Sie die Seite</a> mit einem Klick auf den 
+    Hyperlink, um das Ereignis OnUnLoad auszuführen.
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Navigationsmenü</title>
+<style type=text/css>
+ul {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:x-small;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+li {
+	float:left;
+	position:relative;
+	width:10em;
+}
+li ul {
+	display:none;
+	position:absolute;
+	top:1.2em;
+	left:0;
+}
+li:hover ul {
+	display:block;
+}
+</style>
+
+</head>
+
+<body>
+<ul>
+  <li><a href="#">Über uns</a>
+    <ul>
+      <li><a href="philos.html">Philosophie</a></li>
+      <li><a href="firmeng.html">Firmengeschichte</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Produkte</a>
+    <ul>
+      <li><a href="buecher.html">Bücher</a></li>
+      <li><a href="zeitschr.html">Zeitschriften</a></li>
+      <li><a href="software.html">Software</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Kontakt</a>
+    <ul>
+      <li><a href="beratung.html">Beratung</a></li>
+      <li><a href="vertrieb.html">Vertrieb</a></li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

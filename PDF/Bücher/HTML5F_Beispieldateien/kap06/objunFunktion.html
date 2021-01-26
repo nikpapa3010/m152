@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Objektunabhängige Funktionen</title>
+</head>
+<body>
+<script>
+  document.writeln('<p>isNaN("12345") : ' + isNaN('12345'));
+  document.writeln('<br>isNaN("abcde") : ' + isNaN('abcde'));
+
+  document.writeln('<p>Number("123asd") : ' + Number('123asd'));
+  document.writeln('<br>Number("123") : ' + Number('123'));
+
+  var d = 'Freitag, 20.03.2009 um 10:30 Uhr';
+  document.writeln('<p>var d = \'Freitag, 20.03.2009 um 10:30 Uhr\'');
+  document.writeln('<br>String(d) : ' + String(d));
+  document.writeln('<br>String(123) : ' + String(123));
+
+  document.writeln('<p>parseFloat("123asd") : ' + parseFloat('123asd'));
+  document.writeln('<br>parseFloat("123.4abc") : ' + parseFloat('123.4abc'));
+
+  document.writeln('<p>parseInt("123asd") : ' + parseInt('123asd'));
+  document.writeln('<br>parseInt("123.456abc") : ' + parseInt('123.456abc'));
+</script>
+</body>
+</html>

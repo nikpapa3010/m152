@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Modulo</title>
+<script type="text/javascript">
+function berechne()
+{
+  var erg = 0;
+  zahl = parseInt(document.frm.T1.value);
+  teiler = parseInt(document.frm.T2.value);
+  temp = zahl;
+  while(temp % teiler == 0)
+  {
+    temp = temp/teiler;
+    erg++;
+  }
+  document.frm.T3.value='' + zahl + ' lässt sich ohne Rest ' + erg + 'x durch ' + teiler + ' teilen.';
+}
+</script>
+</head>
+<body>
+<noscript>
+Es ist kein JavaScript aktiv!
+</noscript>
+<h2>Rechnen mit Modulo</h2>
+<form name="frm" onSubmit="berechne(); return false;" action="">
+  <p>Zahl: <input type="text" name="T1" size="10"><br>
+     Teiler: <input type="text" name="T2" size="10"></p>
+  <p><input type="submit" value="Berechnen" name="x"></p>
+  <p>Ergebnis: <input type="text" name="T3" size="50"></p>
+</form>
+</body>
+</html>

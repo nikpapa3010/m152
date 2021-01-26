@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Die Uhrzeit</title>
+  <script type="text/javascript">
+    function Zeitauslese() {
+        var jetzt = new Date()
+        var stunde = jetzt.getHours()
+        var minute = jetzt.getMinutes()
+        var sekunde = jetzt.getSeconds()
+        var zeit=''
+        zeit += ((stunde < 10) ? "0" : "") + stunde
+        zeit += ((minute < 10) ? ":0" : ":") + minute
+        zeit += ((sekunde < 10) ? ":0" : ":") + sekunde
+        document.forms[0].zeitfeld.value = zeit
+        setTimeout("Zeitauslese()",1000)
+    }
+  </script>
+</head>
+<body>
+  <h2>Das Auslesen der aktuellen Uhrzeit</h2>
+  <form>
+    <input type="Text" name="zeitfeld" value="" size="8" readonly>
+  </form>
+  <script type="text/javascript">
+    Zeitauslese();
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>width, height, overflow</title>
+<style type="text/css">
+    body  { font:10pt Verdana,Arial,sans-serif;
+            color:#000080;
+          }
+    .eins { background-color:#BCCBFE;
+            width:150px;
+            height:100px;
+            overflow:auto;
+          }
+    .zwei { background-color:#FF0;
+            width:10cm;
+            height:80px;
+            overflow:scroll;
+          }
+    .drei { background-color:#BCFEBC;
+            width:150px;
+            height:50px;
+            overflow:hidden;
+          }
+  </style>
+</head>
+<body>
+  <h2>Höhe und Breite und die Eigenschaft <span style="font-style:italic;">overflow</span></h2>
+  <p class="eins">overflow:auto; Dies ist ein Absatz von 150 Pixel Breite und 100 Pixel Höhe. Die Höhe ist zu klein, darum schaltet der Browser die Bildlaufleiste ein.</p>
+  <p class="zwei">overflow:scroll; Dies ist ein Absatz von 10 Zentimeter Breite und 80 Pixel Höhe. Die Bildlaufleiste wird für das Element trotzdem eingeblendet.</p>
+  <p class="drei">overflow:hidden; Dies ist ein Absatz von 150 Pixel Breite und 50 Pixel Höhe. Die Höhe ist zu klein, der Text wird abgeschnitten.</p>
+</body>
+</html>

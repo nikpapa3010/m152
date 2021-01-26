@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Summen eines Zahlenbereichs berechnen</title>
+<script type="text/javascript">
+function summe()
+{
+  var erg = 0;
+  for(i = 1; i <= 10; i++)
+  {
+    erg = erg + i;
+  }
+  alert('Die Summe der Zahlen von \n1 bis 10 ist: ' + erg)
+}
+
+function berechne()
+{
+  var erg = 0;
+  a = parseInt(document.frm.T1.value);
+  b = parseInt(document.frm.T2.value);
+  for(i = a; i <= b; i++)
+    erg = erg + i;
+  document.frm.T3.value=erg;
+}
+</script>
+</head>
+
+<body onLoad="summe(); return false;">
+<noscript>
+Es ist kein JavaScript aktiv!
+</noscript>
+
+<h2>Berechnen der Gesamtsumme</h2>
+<form name="frm" onSubmit="berechne(); return false;" action="">
+  <p>Startwert: <input type="text" name="T1" size="10"><br>
+     Endwert:  <input type="text" name="T2" size="10"></p>
+  <p><input type="submit" value="Berechnen" name="x"></p>
+  <p>Summe: <input type="text" name="T3" size="20"></p>
+</form>
+</body>
+</html>

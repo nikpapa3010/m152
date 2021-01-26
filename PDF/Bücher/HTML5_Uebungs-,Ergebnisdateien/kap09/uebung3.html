@@ -1,0 +1,214 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Übung 3: Die interaktive Speisekarte</title>
+<style type="text/css">
+  body { font:normal 10pt Verdana,Arial,sans-serif;
+         color:#000080;
+         background-color:#C2AAB9;
+       }
+  div  { font:10pt Verdana,Arial,sans-serif;
+         position:absolute;
+       }
+  .karte { border:5px solid #A00000;
+           padding:5px;
+           visibility:visible;
+           width:450px; left:60px; top:150px;
+       }
+  h3   { font:bold 12pt Verdana,Arial,sans-serif;
+         text-align:center;
+       }
+  pre  { font:normal 10pt 'Courier New',courier,monospace; }
+</style>
+
+<script type="text/javascript">
+  var letztesMenue='essen0';
+
+  function Menue(i) {
+    EbeneMenue='essen'+i;
+
+    letztesMenue=document.getElementById(letztesMenue).style;
+    letztesMenue.visibility='hidden';
+    letztesMenue=EbeneMenue;
+    jetzigesMenue=document.getElementById(EbeneMenue).style;
+    jetzigesMenue.visibility='visible';
+  }
+</script>
+</head>
+<body>
+
+<h3 align="center">Das Internet-Restaurant</h3>
+<div id="auswahl" style="position:relative; left:50px;">
+<p><b>Wir wünschen einen guten Appetit.</b></p>
+  <form name="formul" action="">
+  <select name="men" onChange="Menue(this.selectedIndex); return false;">
+    <option selected style="background-color:#FFD;">Kalte Vorspeisen</option>
+    <option style="background-color:#DFF;">Warme Vorspeisen</option>
+    <option style="background-color:#FDF;">Salate</option>
+    <option style="background-color:#DFD;">Fleischgerichte vom Grill</option>
+    <option style="background-color:#DDF;">Grillplatten</option>
+    <option style="background-color:#FDD;">Spezialitäten aus dem Backofen</option>
+    <option style="background-color:#DDD;">Fischgerichte</option>
+  </select>
+  </form>
+</div>
+
+
+<div id="essen0" class="karte" style="background-color:#FFD;">
+<h3>Kalte Vorspeisen</h3>
+<hr>
+<pre>
+  Zaziki                                  2,75 &euro;
+      Joghurt mit Gurken und Knoblauch
+
+  Taramas                                 3,00 &euro;
+      giechische Kaviarcreme
+
+  Htipiti                                 3,75 &euro;
+      Schafskäsecreme
+
+  Htapodaki                               4,75 &euro;
+      Oktopussalat
+
+</pre>
+</div>
+
+
+<div id="essen1" class="karte" style="background-color:#DFF; visibility:hidden;">
+<h3>Warme Vorspeisen</h3>
+<hr>
+<pre>
+  Pita Brot                               1,75 &euro;
+      vom Grill mit Zaziki
+
+  Feta tiganiti                           4,75 &euro;
+      panierter und gebratener Schafskäse
+
+  Tigania                                 4,75 &euro;
+      gebratene Zucchini, Auberginen,
+      Peperoni mit Zaziki
+
+  Salingaria                              5,25 &euro;
+      Weinbergschnecken aus dem Backofen
+
+</pre>
+</div>
+
+<div id="essen2" class="karte" style="background-color:#FDF; visibility:hidden;">
+<h3>Salate</h3>
+<hr>
+<pre>
+  Horiatki                                3,25 &euro;
+      Griechischer Bauernsalat
+
+  Marouli                                 3,25 &euro;
+      Grüner Salat
+
+  Panzari                                 3,75 &euro;
+      Rote Beete mit Koblauch
+
+  Tonoslatat                              5,25 &euro;
+      Thunfischsalat mit Ei
+
+</pre>
+</div>
+
+<div id="essen3" class="karte" style="background-color:#DFD; visibility:hidden;">
+<h3>Fleischgerichte vom Grill</h3>
+<hr>
+<pre>
+  Die Beilagen zu jedem Gericht:
+      gemischter Salat, Zaziki, Nudeln,
+      Reis, Pommes Frites
+
+  Suflaki - Suzuki                        7,00 &euro;
+      Zwei kleine Spieße vom Schwein und
+      zwei Hackröllchen
+
+  Gyros                                   7,50 &euro;
+      Original Schweinefleisch vom Drehspieß
+
+  Gyros Pita                              8,50 &euro;
+      Geschnetzeltes Fleisch mit Pitabrot
+      und Knoblauch
+
+  Kota Fileto                             9,75 &euro;
+      Hähnchenfilet mit Brokkoli und
+      Knoblauchsoße
+
+</pre>
+</div>
+
+<div id="essen4" class="karte" style="background-color:#DDF; visibility:hidden;">
+<h3>Grillplatten</h3>
+<hr>
+<pre>
+  Kreta-Platte                            9,75 &euro;
+      Gyros, Hackfleischröllchen, Lammkotelett,
+      Souvlaki
+
+  Mylos-Platte                           10,00 &euro;
+      Gyros, Schweinefilet, Wachtelfilet,
+      Brustfilet und Souvlakispieß
+
+  Barba Georgios-Platte                  10,50 &euro;
+      Gyros, Hackfleischröllchen, Lammkotelett,
+      Brustfilet und Souvlakispieß
+
+  Herkules-Platte                        13,75 &euro;
+      Für den großen Hunger: Grillvariation
+      der besonderen Art
+
+</pre>
+</div>
+
+<div id="essen5" class="karte" style="background-color:#FDD; visibility:hidden;">
+<h3>Spezialitäten aus dem Backofen</h3>
+<hr>
+<pre>
+  Zu jedem Gericht gibt es einen Salat!
+
+  Mousaka                                 7,25 &euro;
+      Auberginenauflauf mit Kartoffeln und
+      Hackfleisch
+
+  Kleftiko                                9,75 &euro;
+      Fleisch aus der Lammkeule, dazu Brokkoli
+      mit Käse überbacken
+
+  Mpekri mese                             9,75 &euro;
+      Geschnetzeltes Schweinefilet mit Paprika,
+      Zwiebeln, Knoblauch, Brandy und Reis
+
+</pre>
+</div>
+
+<div id="essen6" class="karte" style="background-color:#DDD; visibility:hidden;">
+<h3>Fischgerichte</h3>
+<hr>
+<pre>
+  Kalamarakia                             8,75 &euro;
+      Tintenfischringe frittiert
+
+  Garides                                11,75 &euro;
+      Scampie vom Grill mit Reis in einer
+      feurigen Knoblauchsoße
+
+  Scampie-Spieß                          13,25 &euro;
+      mit Reis, Paprika, Zwiebeln und Knoblauch
+
+</pre>
+</div>
+
+<!--
+   Da die Browser beim Reload die Auswahl nicht
+   von allein zurücksetzen, muss dies von einem
+   Script übernommen werden
+//-->
+<script type="text/javascript">
+if (document.formul.men.selectedIndex != 0);
+  document.formul.men.selectedIndex = 0;
+</script>
+
+</body>
+</html>

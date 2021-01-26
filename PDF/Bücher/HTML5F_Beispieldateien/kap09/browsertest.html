@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DHTML-Start</title>
+  <script type="text/javascript">
+      function test() {
+        ns4 = (document.layers) ? 1 : 0;
+        ie4 = (document.all) ? 1 : 0;
+        w3c = (document.documentElement) ? 1 : 0;
+
+        if (w3c)
+          alert("Sie benutzen einen Browser, der den aktuellen DOM-Standard unterstützt.\n\nDies können sein:\nFirefox V1 oder höher\nMicrosoft Internet Explorer V5 oder höher\nOpera V6 oder höher bzw. Apple Safari oder Chrome Google");
+        else if (ie4)
+          alert("Sie benutzen den Microsoft Internet Explorer V4.x");
+        else if (ns4)
+          alert("Sie benutzen den Netscape Navigator V4.x");
+        else
+          alert("Leider kann ich Ihnen nicht sagen, welchen Browser Sie benutzen!");
+        }
+  </script>
+</head>
+<body>
+  <h3>Test, welcher Browser genutzt wird</h3>
+
+  <noscript>Um den DOM-Test durchführen zu können, müssen Sie das Ausführen von JavaScript zulassen.</noscript>
+
+  <pre>
+    if (document.layers)                  // Netscape Navigator V4.x
+    {
+       ns4 = 1;
+       ie4 = 0;
+       w3c = 0;
+    }
+    else if (document.all)                // sonst Microsoft Internet Explorer V4.x und 5.x
+    {
+       ns4 = 0;
+       ie4 = 1;
+       w3c = 0;
+    }
+    else if (document.documentElement)    // sonst Microsoft Internet Explorer V5+, Opera V6+, Mozilla Firefox, Apple Safari, Google Chrome
+    {
+       ns4 = 0;
+       ie4 = 0;
+       w3c = 1;
+    }
+  </pre>
+  <p>K&uuml;rzer hingegen ist die Abfrage mit dem konditionalen Operator:
+  <pre>
+    ns4 = (document.layers)          ? 1 : 0;   // Netscape Navigator V4.x
+    ie4 = (document.all)             ? 1 : 0;   // Microsoft Internet Explorer V4.x und 5.x
+    w3c = (document.documentElement) ? 1 : 0;   // Microsoft Internet Explorer V5+, Opera V6+, Mozilla Firefox, Apple Safari, Google Chrome
+  </pre>
+  <a href="javascript:test();">Test durchführen</a>
+</body>
+</html>

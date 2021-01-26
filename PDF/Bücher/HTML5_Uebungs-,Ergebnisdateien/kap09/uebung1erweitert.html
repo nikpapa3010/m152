@@ -1,0 +1,72 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Übung 1: Farbauswahl</title>
+<style type="text/css">
+  body  { background-color:#AAAAAA;
+        }
+  h1    { font:bold 16pt Arial,sans-serif;
+          text-align:center;
+        }
+  p     { font:12pt Arial,sans-serif;
+          text-decoration:underline;
+          text-align:center;
+        }
+ table  { border-width:0px;
+          width:300px; height:20px;
+          padding:0px;
+        }
+ td     { border:1px solid black;
+          height:20px;
+        }
+</style>
+<script type="text/javascript">
+  function farbwechselbg(id) {
+    document.getElementById('body').style.backgroundColor = document.getElementById(id).style.backgroundColor;
+  }
+  function farbwechselfg(id) {
+    document.getElementById('body').style.color = document.getElementById(id).style.backgroundColor;
+  }
+
+</script>
+</head>
+
+<body id="body">
+
+<h1>Ändern der Hintergrundfarbe</h1>
+
+<div align="center">
+<table summary="Tabelle mit Hintergrundfarben">
+  <tr>
+    <td style="width:33%; background-color:#FF0000;" id="bg11" onClick="farbwechselbg('bg11');">&nbsp;</td>
+    <td style="width:33%; background-color:#00FF00;" id="bg12" onClick="farbwechselbg('bg12');">&nbsp;</td>
+    <td style="width:33%; background-color:#0000FF;" id="bg13" onClick="farbwechselbg('bg13');">&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="width:33%; background-color:#FFA500;" id="bg21" onClick="farbwechselbg('bg21');">&nbsp;</td>
+    <td style="width:33%; background-color:#F0E68C;" id="bg22" onClick="farbwechselbg('bg22');">&nbsp;</td>
+    <td style="width:33%; background-color:#ADD8E6;" id="bg23" onClick="farbwechselbg('bg23');">&nbsp;</td>
+  </tr>
+</table>
+</div>
+
+<h1>Ändern der Textfarbe</h1>
+<div align="center">
+<table summary="Tabelle mit Vordergrundfarben">
+  <tr>
+    <td style="width:33%; background-color:#FF0000;" id="fg11" onClick="farbwechselfg('fg11');">&nbsp;</td>
+    <td style="width:33%; background-color:#00FF00;" id="fg12" onClick="farbwechselfg('fg12');">&nbsp;</td>
+    <td style="width:33%; background-color:#0000FF;" id="fg13" onClick="farbwechselfg('fg13');">&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="width:33%; background-color:#FFA500;" id="fg21" onClick="farbwechselfg('fg21');">&nbsp;</td>
+    <td style="width:33%; background-color:#F0E68C;" id="fg22" onClick="farbwechselfg('fg22');">&nbsp;</td>
+    <td style="width:33%; background-color:#ADD8E6;" id="fg23" onClick="farbwechselfg('fg23');">&nbsp;</td>
+  </tr>
+</table>
+<p onClick="document.getElementById('body').style.backgroundColor='#AAAAAA'; document.getElementById('body').style.color='#000000';">Zurücksetzen</p>
+
+</div>
+
+</body>
+</html>

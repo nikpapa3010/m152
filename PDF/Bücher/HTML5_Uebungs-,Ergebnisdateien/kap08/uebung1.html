@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Kapitel 10 - Übung 2</title>
+  <script type="text/javascript">
+      var max = 20;
+
+      function check(eingabe)
+      {
+        if (eingabe.length > max)
+        {
+          alert("Sie haben die maximale Anzahl von " + max + " Zeichen überschritten.");
+          document.Formul.Keywords.focus();
+        }
+        if (eingabe.length < max)
+        {
+          alert("Sie haben die maximale Anzahl von " + max + " Zeichen nicht ausgeschöpft.");
+          document.Formul.Keywords.focus();
+        }
+      }
+
+      /* Erweiterung des Scripts, auf Zählen der Zeichen beim Tastendruck */
+      function counter(eingabe)
+      {
+          document.Formul.kwcontrol.value = eingabe.length + "/" + max;
+      }
+  </script>
+</head>
+<body>
+  <h2>Zählen der eingegebenen Zeichen</h2>
+  <form action="" name="Formul">
+    Zeicheneingabe:<br>
+    <textarea name="Keywords" cols="50" rows="5" onKeyUp="counter(this.value);" onBlur="check(this.value)"></textarea>
+    <br>
+    <input type="Text" name="kwcontrol" size="7" value="" readonly> Zeichen<br>
+  </form>
+</body>
+</html>

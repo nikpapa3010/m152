@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>W&uuml;rfel</title>
+  <script type="text/javascript">
+    function RolleWuerfel()
+    {
+      var Zufallszahl = Math.random() * 6;
+      return (Math.floor(Zufallszahl) + 1);
+    }
+    </script>
+</head>
+<body>
+  <h3>W&uuml;rfelergebnisse:</h3>
+  <script type="text/javascript">
+    for(i = 0; i < 10; i++)
+      document.write(RolleWuerfel() + " - ");
+  </script>
+  <p><a href="javascript:location.reload();">Neu laden</a>
+</body>
+</html>

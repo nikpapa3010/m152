@@ -1,0 +1,1 @@
+Text, der per AJAX &uuml;ber eine HTTP-Anfrage in diese Webseite nachtr&auml;glich eingef&uuml;gt wurde.

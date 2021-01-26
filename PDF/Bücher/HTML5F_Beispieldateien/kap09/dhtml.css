@@ -1,0 +1,14 @@
+body { font:10pt Verdana,Arial,sans-serif; color:#000080; }
+
+h2   { font:bold 14pt 'Trebuchet MS'; color:#000000; }
+
+pre  { font-family:'Courier New',Courier,monospace; color:#008000; }
+
+.box1 { border:5px solid #A00000; padding:5px }
+.box2 { border:5px dotted #00A000; padding:5px }
+
+a:visited,
+a:link    { color:#800000; text-decoration:overline underline; font-weight:bold; }
+a:hover   { color:#AA0000; text-decoration:none; font-weight:bold; }
+
+

@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Grafik austauschen</title>
+<style type="text/css">
+  body { font-family: "Trebuchet MS",Verdana,Arial; font-size:12pt; }
+  p.klein { font-size:10pt; }
+  h2   { font-size:18pt; font-weight:bold; }
+</style>
+<script type="text/javascript">
+  function zurueck() {
+    document.bild.src = "images/blank.gif"
+  }
+</script>
+
+</head>
+<body>
+  <div align="center">
+  <h3>Grafik austauschen</h3>
+  <img src="images/blank.gif" name="bild" alt="Platzhalter"><br>
+  <a href="#" onMouseOver="document.bild.src='images/fruehling.gif';"
+              onMouseOut="zurueck();">Fr&uuml;hling</a> - 
+  <a href="#" onMouseOver="document.bild.src='images/sommer.gif';" 
+              onMouseOut="zurueck();">Sommer</a> - 
+  <a href="#" onMouseOver="document.bild.src='images/herbst.gif';" 
+              onMouseOut="zurueck();">Herbst</a> - 
+  <a href="#" onMouseOver="document.bild.src='images/winter.gif';" 
+              onMouseOut="zurueck();">Winter</a>
+  <p class="klein">F&uuml;hren Sie die Maus über die Verweise, <br>um die
+              verschiedenen Grafiken anzuzeigen.</p>
+  </div>
+</body>
+</html>

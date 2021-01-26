@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Füll- und Konturfarbe festlegen</title>
+<style type="text/css">
+#meinCanvas {
+	border:1px solid #1B1010;
+}
+body script {
+}
+</style>
+</head>
+<body>
+<canvas id="meinCanvas" width="500" height="300"></canvas>
+<script>
+var canvas = document.getElementById("meinCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "turquoise";
+ctx.beginPath();
+ctx.arc(250, 150, 100, 0, Math.PI * 2, false);
+ctx.fill()
+ctx.strokeStyle = "black";
+ctx.beginPath();
+ctx.arc(250, 150, 100, 0, Math.PI * 2, false);
+ctx.stroke();
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ebenen mit z-index</title>
+<style type="text/css">
+    div  { position: absolute;
+           border: 2px solid white;
+           color: white;
+           padding: 2px 5px;
+           font-weight: bold;
+         }
+    .nr1 { top: 50px;
+           left: 50px;
+           width: 350px;
+           height: 275px;
+           z-index: 10;
+           background-color: red;
+         }
+    .nr2 { top: 200px;
+           left: 75px;
+           width: 300px;
+           height: 100px;
+           z-index: 30;
+           background-color: green;
+         }
+
+    .nr3 { top: 150px;
+           left: 200px;
+           width: 200px;
+           height: 200px;
+           z-index: 20;
+           background-color: blue;
+           text-align: right;
+         }
+</style>
+</head>
+<body>
+  <h2>Ebenen mit z-index</h2>
+  <div class="nr1">1. als Ebene positioniertes Element: Ama me fiedeliter! Fidem meam nota: de corde totaliter et ex mente tota sum presentialiter absens in remota. Qui autem auscultare nolet, exsurgat foras, ut sit, ubi sedat ile qui auscultare vult. </div>
+  <div class="nr2">2. als Ebene positioniertes Element:<p>Selbst ungewohnte Überschneidungen von einzelnen Elementen sind möglich.</div>
+  <div class="nr3">3. als Ebene positioniertes Element.</div>
+</body>
+</html>

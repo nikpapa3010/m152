@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Media-Query</title>    
+<style type="text/css">
+<!-- 
+body { margin: 0 }  
+#navigation {
+	position: absolute;
+	padding: 5px;
+	width: 20%;
+	background-color: #33CCFF;
+}
+#inhalt {
+	position: relative;
+	padding: 5px;
+	width: 80%;
+	left: 20%;
+	background-color: #FFCC99;
+}
+#fusszeile {
+	position: relative;
+	padding: 5px;
+	width: 80%;
+	left: 20%;
+	background-color: #CCCCCC;
+}
+@media screen and (max-width: 450px) {
+	#inhalt, #navigation, #fusszeile {
+		width: 100%;
+		position: inherit;
+	}
+	#navigation li {
+		list-style: none;
+		display: inline-block;
+		padding: 3px;
+	}
+}
+-->    
+</style> 
+</head>
+
+<body>
+<nav id="navigation"> 
+  <ul>
+    <li>Link 1 </li>
+    <li>Link 2</li>
+    <li>Link 3</li>
+  </ul>
+</nav>
+<div id="inhalt"> 
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich  wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich  wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich  wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+</div>
+<footer id="fusszeile"> Fußzeile </footer>
+</body>
+</html>

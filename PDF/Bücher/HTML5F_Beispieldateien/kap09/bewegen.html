@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Ebenen positionieren</title>
+<script type="text/javascript">
+  var ebene;
+
+  function init() {
+    w3c = (document.documentElement) ? 1 : 0;
+    if (w3c)
+      ebene = document.getElementById('pfeile');
+    else
+      alert('Sie verwenden einen Browser, der den W3C-Standard zum Ansprechen von Elementen nicht unterstützt.');
+  }
+
+  function scroll(laufweite,richtung,endposition) {
+
+    if (richtung==0) {   // links
+      ebene.style.left = (parseInt(ebene.style.left) - laufweite) + "px";
+      if(parseInt(ebene.style.left) > endposition)
+        setTimeout("scroll("+laufweite+","+richtung+","+endposition+")",10);
+    }
+
+    else if (richtung==1) { // rechts
+      ebene.style.left = (parseInt(ebene.style.left) + laufweite) + "px";
+      if(parseInt(ebene.style.left) < endposition)
+        setTimeout("scroll("+laufweite+","+richtung+","+endposition+")",10);
+    }
+
+    else if (richtung==2) { // oben
+      ebene.style.top = (parseInt(ebene.style.top) - laufweite) + "px";
+      if(parseInt(ebene.style.top) > endposition)
+        setTimeout("scroll("+laufweite+","+richtung+","+endposition+")",10);
+    }
+
+    else if (richtung==3) { // unten
+      ebene.style.top = (parseInt(ebene.style.top) + laufweite) + "px";
+      if(parseInt(ebene.style.top) < endposition)
+        setTimeout("scroll("+laufweite+","+richtung+","+endposition+")",10);
+    }
+  }
+</script>
+</head>
+<body onLoad="init();">
+  <h2>Ebenen positionieren - Langsame Bewegung</h2>
+  <p>Klicken Sie auf einen der Pfeile, um die Ebene mit der Grafik an eine andere Stelle zu bewegen.</p>
+  <div id="pfeile" style="position:absolute; left:200px; top:200px; visibility:visible;">
+    <img src="pfeile.gif" alt="" title="Klicken Sie auf einen der vier Pfeile, um die Grafik zu verschieben." border="0" width="133" height="131" usemap="#pfeilmap">
+  </div>
+
+  <map name="pfeilmap">
+    <area shape="circle" coords=" 25,65,25" href="javascript:scroll(1,0,10)" alt="nach links" title="nach links">
+    <area shape="circle" coords="109,65,25" href="javascript:scroll(1,1,400)" alt="nach rechts" title="nach rechts">
+    <area shape="circle" coords=" 67,25,25" href="javascript:scroll(1,2,10)" alt="nach oben" title="nach oben">
+    <area shape="circle" coords="67,107,25" href="javascript:scroll(1,3,400)" alt="nach unten" title="nach unten">
+  </map>
+</body>
+</html>

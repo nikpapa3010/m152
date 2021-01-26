@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Kapitel 10 - Übung 3</title>
+  <style type="text/css">
+      body,td { font:10pt Verdana,Arial,sans-serif;}
+  </style>
+  <script type="text/javascript">
+      var j = false;
+
+      function Pizzatest()
+      {
+        /* Test, ob Größe gewählt */
+        j = false;
+        for (i = 0; i < document.Pizzaform.size.length; i++)
+        {
+          if (document.Pizzaform.size[i].checked)
+          {
+            j = true;
+            groesse = document.Pizzaform.size[i].value;
+            break;
+          }
+        }
+
+        if (!j)
+        {
+          alert("Sie haben keine Pizzagröße gewählt.");
+          return false;
+        }
+
+        /* Test, ob Pizza gewählt */
+        j = false;
+        for (i = 0; i < document.Pizzaform.pizza.length; i++)
+        {
+          if (document.Pizzaform.pizza[i].checked)
+          {
+            j = true;
+            pizzawahl = document.Pizzaform.pizza[i].value;
+            break;
+          }
+        }
+        if (!j)
+        {
+          alert("Sie haben sich noch nicht für eine Pizza entschieden.");
+          return false;
+        }
+
+        var belag = "";
+        /* Test, ob bei individueller Zusammenstellung mindestens zwei Zutaten gewählt */
+        if (document.Pizzaform.pizza[3].checked)
+        {
+          var zaehlen = 0;
+          var belag = "Zutaten: ";
+          for (i = 0; i < document.Pizzaform.zutat.length; i++)
+          {
+            if (document.Pizzaform.zutat[i].checked)
+            {
+              zaehlen++;
+              belag += document.Pizzaform.zutat[i].value + "; ";
+            }
+          }
+          if (zaehlen < 2)
+          {
+            alert("Sie müssen mindestens zwei Zutaten\nfür Ihre Pizza wählen.");
+            return false;
+          }
+        }
+
+        alert("Folgende Bestellung liefern wir zu Ihnen nach Hause:\n"
+              + "\nGröße: " + groesse        
+              + "\nPizza: " + pizzawahl
+              + "\n" + belag)
+      }
+
+      function warnung()
+      {
+        return confirm("Wollen Sie wirklich Ihre Auswahl zurücksetzen?");
+      }
+  </script>
+
+</head>
+<body>
+ <noscript><h3>Ohne JavaScript ist keine Pizza-Bestellung möglich!</h3></noscript>
+  <p>&nbsp;</p>
+  <h2>WWW-Pizza-Service</h2>
+  <form action="" name="Pizzaform" onSubmit="return Pizzatest();" onReset="return warnung();">
+    <p>Bestellen Sie eine fertige Pizza, oder stellen Sie eine Pizza<br>ganz nach Ihren Wünschen zusammen. Wir liefern alles.</p>
+    <table summary="Tabelle zur formatierten Anzeige" border="0">
+      <tr>
+        <td bgcolor="#EEE8AA">Größe:</td>
+        <td bgcolor="#EEE8AA">
+        <input type="radio" name="size" value="klein">klein (20 cm)<br>
+        <input type="radio" name="size" value="mittel">mittel (26 cm)<br>
+        <input type="radio" name="size" value="groß">groß (32 cm)</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFACD">Art der Pizza:</td>
+        <td bgcolor="#FFFACD">
+          <input type="radio" name="pizza" value="Tonno">Tonno (Thunfisch, Zwiebel, Knoblauch)<br>
+          <input type="radio" name="pizza" value="Quattro">Quattro (Salami, Schinken, Paprika, Champions)<br>
+          <input type="radio" name="pizza" value="Italia">Italia (Schinken, Artischocke, Zwiebel)<br>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td bgcolor="#EEE8AA">
+          <input type="radio" name="pizza" value="individuell">individuelle Zusammenstellung<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="zutat" value="Salami">Salami<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="zutat" value="Schinken">Schinken<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="zutat" value="Champignons">Champignons<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="zutat" value="Käse">Käse<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="zutat" value="Peperoni">Peperoni<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="zutat" value="Knoblauch">Knoblauch
+        </td>
+      </tr>
+    </table>
+    <p>
+    <input type="submit" value="Abschicken">
+    <input type="reset" value="Zurücksetzen"></p>
+  </form>
+</body>
+</html>

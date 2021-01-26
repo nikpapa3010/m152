@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Eingabe testen</title>
+<script>
+function testen() {
+eingabe = document.Eingabe.Feld.value;
+if (eingabe == "") {
+alert("Sie müssen etwas eingeben!")
+document.Eingabe.Feld.focus();
+return false;
+} else {
+alert("Vielen Dank!");
+return true;
+}
+}
+</script>
+</head>
+<body>
+<div align="center">
+<h3>Test einer Eingabe</h3>
+<form action="" name="Eingabe" onSubmit="return testen();">
+<input type="text" name="Feld">
+<input type="submit" name="x1" value="Testen">
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Standort ermitteln</title>
+</head>
+<body>
+<button onclick="standortErmitteln()">Standort ermitteln</button>
+<p>Ihr Standort:</p>
+<p id="ausgabe"></p>
+<script>
+var x = document.getElementById("ausgabe");
+function standortErmitteln() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(zeigeStandort, zeigeFehler);
+    } else { 
+        x.innerHTML = "Ihr Browser unterstützt die Ermittlung des Standorts nicht.";
+    }
+}
+function zeigeStandort(standort) {
+    x.innerHTML = "Breitengrad: " + standort.coords.latitude + 
+    "<br>Längengrad: " + standort.coords.longitude;	
+}
+function zeigeFehler(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "Zugriff auf den Standort des Benutzers verweigert."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Standortinformation ist nicht verfügbar."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "Zeitüberschreitung der Anfrage."
+            break;
+    }
+}
+</script>
+</body>
+</html>

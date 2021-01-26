@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Kein Zugriff</title>
+<style type="text/css">
+  body { font-family: Trebuchet MS,Verdana,Arial; font-size:12pt; }
+  p.klein { font-size:10pt; }
+  h2   { font-size:18pt; font-weight:bold; }
+</style>
+<script type="text/javascript">
+  var message_lm = "Ja, die linke Maustaste funktioniert!";
+  var message_rm = "Nein, das Speichern von Bildern ist untersagt.";
+  function wache(e) {
+    if (window.navigator.appName == "Microsoft Internet Explorer") {
+      if(window.event.button == 2) { // rechte Maustaste
+        alert(message_rm);
+        return false;
+      }
+      if(window.event.button == 1) // linke Maustaste
+        alert(message_lm);
+      return true;
+    }
+    if ((window.navigator.appName == "Netscape") ||
+        (window.navigator.appName == "Opera")) {
+      if(e.which == 3) { // rechte Maustaste
+        alert(message_rm);
+        return false;
+      }
+      if(e.which == 1) // linke Maustaste
+        alert(message_lm);
+      return true;
+    }
+  }
+  document.onmousedown = wache;
+</script>
+</head>
+
+<body>
+  <div align="center">
+    <h2>Abschalten der rechten Maustaste</h2>
+    <p><img src="images/winter.jpg"></p>
+    <p class="klein">Drücken Sie die rechte Maustaste und <br>versuchen Sie das Bild erneut zu speichern.</p>
+  </div>
+</body>
+</html>

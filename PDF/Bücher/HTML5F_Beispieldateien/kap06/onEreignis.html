@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Funktionen und Ereignisse in JavaScript</title>
+<style type="text/css">
+    body   { font-family:Verdana,Arial,sans-serif;
+             color:black;
+           }
+    div.box { border: 1px solid green;
+              margin:5px;
+              padding-left: 5px;
+           }
+    h4 { text-decoration: underline;}
+</style>
+<script type="text/javascript">
+function Meldung(txt) {
+  alert(txt);
+}
+</script>
+</head>
+
+<body>
+<noscript>
+Ihr Browser versteht kein JavaScript. Es kann daher nicht ausgeführt werden.
+</noscript>
+
+  <h3>Funktionen und Ereignisse in JavaScript</h3>
+  <p>Drücken Sie Tabulatortaste um bestimmte Ereignisse auszulösen</p>
+
+  <form action="">
+
+  <div class="box">
+    <h4>Ereignis: onClick</h4>
+    <p>Klicken Sie auf die Schaltfläche.
+    <input type="button" value="klicken" onClick="Meldung('Sie haben geklickt.')">
+  </div>
+
+    <div class="box">
+    <h4>Ereignis: onDblClick</h4>
+    <p>Klicken Sie doppelt auf die Schaltfläche.
+    <input type="button" value="doppelklicken" onDblClick="Meldung('Sie haben doppelt geklickt.')">
+    </div>
+
+    <div class="box">
+    <h4>Ereignis: onMouseOver / onFocus</h4>
+    <p>Bewegen Sie die Maus über die Schaltfläche.
+    <a href="bla."  onMouseOver="Meldung('Sie haben die Maus über das Objekt bewegt.')" onFocus="Meldung('OnFocus')">
+    <img src="kreis.gif"></a>
+    </div>
+
+    <div class="box">
+    <h4>Ereignis: onSelect / onChange</h4>
+    <p>Selektieren und ändern Sie den Text. Verlassen Sie das Eingabefeld mit der Return-Taste.
+    <input type="text" value="Wert ändern" onSelect="Meldung('onSelect');" onChange="Meldung('onChange');">
+    </div>
+  </form>
+
+  <form onSubmit="Meldung('onSubmit: Sie haben das Formular abgeschickt.'); return false;" onReset="Meldung('onReset: Sie haben das Formular zurückgesetzt.')" action="">
+    <div class="box">
+    <h4>Ereignis: onBlur / onSubmit / onReset</h4>
+      <input type="text" value="" onBlur="Meldung('onBlur')">
+      <input type="submit" name="x" value="Submit">
+      <input type="reset" name="y" value="Reset">
+    </div>
+  </form>
+
+    <div class="box">
+    <h4>Ereignis: onBlur / onError</h4>
+    <p>Eine nicht vorhandene Grafik: <a href="#" onBlur="Meldung('onBlur')"><img src="kreis1.gif" height="10" width="10" alt="nicht vorhandene Grafik" title="nicht vorhandene Grafik" onError="javascript:alert('onError:Bildfehler');"></a></p>
+    </div>
+
+    <div class="box">
+    <h4>Ereignis: onKeyDown</h4>
+    <p><a href="#" onKeyDown="Meldung('onKeyDown')">Hyperlink für onKey...-Ereignisse; Link muss Focus haben</a>
+    </div>
+
+  <form action="">
+    <div class="box">
+    <h4>Ereignis: onBlur / onFocus</h4>
+    <p><input type="button" value="klicken" onBlur="Meldung('onBlur')" onFocus="Meldung('onFocus')"></p>
+    </div>
+  </form>
+
+</body>
+</html>

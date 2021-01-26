@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Media-Query</title></head>    
+<style type="text/css">
+<!-- 
+body { margin: 0 }  
+
+#navigation, #inhalt, #fusszeile {
+  margin:0px;
+  padding:5px;
+}
+#navigation {
+	background-color: #33CCFF;
+}
+#navigation li {
+	display: inline-block;
+	padding: 3px;
+}
+#inhalt {
+	background-color: #FFCC99;
+}
+#fusszeile {
+	background-color: #CCCCCC;
+}	
+
+@media screen and (min-width: 451px) {
+#navigation li {
+	padding: 0px;
+	display: list-item;
+}
+#inhalt {
+	position: relative;
+	width: 80%;
+	left: 20%;
+}
+#fusszeile {
+	position: relative;
+	width: 80%;
+	left: 20%;
+}
+#navigation {
+	position: absolute;
+	width: 20%;
+}
+}
+
+-->    
+</style> 
+</head>
+
+<body>
+<nav id="navigation"> 
+  <ul>
+    <li>Link 1 </li>
+    <li>Link 2</li>
+    <li>Link 3</li>
+  </ul>
+</nav>
+<div id="inhalt"> 
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich  wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich  wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+  <p>Der Inhalt kann beliebig lang werden; die Position der Fußzeile passt sich  wegen ihrer relativen Positionierung stets an die Länge des Inhaltskastens an.</p>
+</div>
+<footer id="fusszeile"> Fußzeile </footer>
+</body>
+</html>

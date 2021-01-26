@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Interaktion</title>
+</head>
+<body>
+<h3>Meine Homepage</h3>
+<script>
+  var name = "";
+  janein = confirm("Möchten Sie mir Ihren Namen verraten?");
+  if (janein == true)
+    name = prompt("Wie ist Ihr Name?", "");
+
+  if ((name == "") || (name == null)) {
+    alert("Name unbekannt.");
+    name = "";
+  }
+  document.write("Hallo " + name + ",<br>willkommen auf meiner Webseite.");
+</script>
+</body>
+</html>

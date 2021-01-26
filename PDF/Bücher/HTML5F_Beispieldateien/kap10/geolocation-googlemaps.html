@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Standort ermitteln</title>
+</head>
+<body>
+<button onclick="standortErmitteln()">Standort ermitteln</button>
+<p>Ihr Standort:</p>
+<div id="karte"></div>
+<script>
+var x = document.getElementById("ausgabe");
+function standortErmitteln() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(zeigeStandort);
+    } else { 
+        x.innerHTML = "Ihr Browser unterstützt die Ermittlung des Standorts nicht.";
+    }
+}
+function zeigeStandort(standort) {
+	var latlon = standort.coords.latitude + "," + standort.coords.longitude;
+    var kartenbild = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("karte").innerHTML = "<img src='"+kartenbild+"'>";
+}
+</script>
+</body>
+</html>
