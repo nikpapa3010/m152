@@ -1,0 +1,27 @@
+div.background {
+	background-image: url('../img/background.jpg');
+	background-color: #F2F2EB;
+}
+
+article {
+	background-color: white;
+	padding: 2%;
+	overflow: auto;
+}
+
+li {
+	text-decoration: none;
+}
+
+footer {
+	background-color: gray;
+	padding: 2%;
+	color: lightgray;
+	text-align: center;
+}
+
+img.social {
+	width: 50%;
+	min-width: 100px;
+	height: auto;
+}
