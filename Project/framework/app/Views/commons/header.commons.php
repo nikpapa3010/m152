@@ -10,17 +10,8 @@
         <li class="nav-item">
           <a class="nav-link" href="home">Home<span class="sr-only"></span></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="projects" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Projekte
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Verfallend</a>
-            <a class="dropdown-item" href="#">Another Project</a>
-            <a class="dropdown-item" href="#">More Projects?</a>
-            <a class="dropdown-item" href="#">There aren't any</a>
-            <a class="dropdown-item" href="#">Still reading, eh?</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="projects">Projekte<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="aboutus">Über uns<span class="sr-only"></span></a>
