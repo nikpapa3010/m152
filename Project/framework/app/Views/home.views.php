@@ -36,6 +36,7 @@
 
                         <br>
 
+
                         <?php echo $user->lastarticles(); ?>
                     </article>
                 </div>
